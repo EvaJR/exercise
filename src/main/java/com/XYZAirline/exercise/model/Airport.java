@@ -22,6 +22,12 @@ public class Airport implements Serializable {
         this.airplanes = airplanes;
     }
 
+    // helper method to make sure both sides are updated
+    public void addAirplanes(Airplane airplane) {
+        this.airplanes.add(airplane);
+        airplane.setAirport(this);
+    }
+
     private String name;
 
     public long getId() {
