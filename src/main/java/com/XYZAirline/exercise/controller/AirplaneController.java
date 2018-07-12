@@ -2,6 +2,7 @@ package com.XYZAirline.exercise.controller;
 
 import com.XYZAirline.exercise.model.Airplane;
 import com.XYZAirline.exercise.repository.AirplaneRepository;
+import com.XYZAirline.exercise.repository.AirportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,9 @@ public class AirplaneController {
 
     @Autowired
     private AirplaneRepository airplaneRepository;
+
+    @Autowired
+    private AirportRepository airportRepository;
 
 
     @PostMapping

@@ -1,10 +1,9 @@
 package com.XYZAirline.exercise.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Airplane implements Serializable {
@@ -15,6 +14,11 @@ public class Airplane implements Serializable {
     private long id;
 
     private int tonsOfFuel;
+
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Airport airport;
+
 
     public long getId() {
         return id;
