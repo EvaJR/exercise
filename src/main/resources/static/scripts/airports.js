@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 } );
 
-$("#addAiportButton").click(function() {
+$("#addAirportButton").click(function() {
 
             var jsonObject = {
                 id: $("#id").val(),
