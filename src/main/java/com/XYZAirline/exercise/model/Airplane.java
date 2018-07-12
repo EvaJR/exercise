@@ -16,9 +16,16 @@ public class Airplane implements Serializable {
     private int tonsOfFuel;
 
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(fetch=FetchType.LAZY)
     private Airport airport;
 
+    public Airport getAirport() {
+        return airport;
+    }
+
+    public void setAirport(Airport airport) {
+        this.airport = airport;
+    }
 
     public long getId() {
         return id;
